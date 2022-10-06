@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+	<!--css external file link-->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!--js external file link-->
+	<script src="../js/script.js"></script>
+    
+    <style>
+        .contact-box{
+            width: 90%;
+            height: 650px;
+            background-color: #333;
+            margin: 20px auto;
+            display: flex;
+            box-shadow: 0 8px 16px rgba(0,0,0,.1);
+            position: relative;
+
+        }
+        .contact-box .contact{
+            background: #fff;
+            width: 50%;
+            height: 100%;
+            float: left;
+            background: #333;
+            box-shadow: 0 8px 16px rgba(0,0,0,.1);
+        }
+        .contact-box .contact-img{
+            background: #000;
+            width: 50%;
+            height: 100%;
+            float: right;
+            background: url(../images/cover3.webp);
+            background-size: 100% 100%;
+        }
+        .contact-box .contact-img p{
+            font-size: 70px;
+            text-align: center;
+            margin-top: 250px;
+            color: #04aa6d;
+            font-family: poppins;
+            text-shadow: 0 8px 16px rgba(0,0,0,.1);
+        }
+        .contact-box .contact .formbox label{
+            color: #04aa6d;
+            font-family: poppins;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+       .formbox{
+           position: relative;
+           width: 90%;
+           margin: auto;
+       }
+       .formbox .row5{
+           display: flex;
+           gap: 20px;
+       }
+       .inputbox{
+           display: flex;
+           flex-direction: column;
+           margin-bottom: 15px;
+           width: 50%;
+       }
+       .formbox .row10 .inputbox{
+           width: 100%;
+
+       }
+       .inputbox input{
+           padding: 10px;
+           font-size: 15px;
+           outline: none;
+           border: 1px solid #000;
+           background: #f5f5f0;
+
+       }
+       .inputbox textarea{
+           padding: 10px;
+           font-size: 15px;
+           outline: none;
+           border: 1px solid #000;
+           height: 120px;
+           resize: none;
+       }
+       .inputbox #send-btn{
+           color: #fff;
+           font-family: poppins;
+           background-color: #04aa6d;
+           font-size: 16px;
+           margin-top: 10px;
+       }
+       .inputbox #send-btn:hover{
+           color: #04aa6d;
+           background: #fff;
+           cursor: pointer;
+       }
+       span.formerror{
+           font-family: 'poppins';
+           color: red;
+           font-size: 13px;
+       }
+    </style>
+</head>
+<body>
+    <header class="header">
+
+        <div class="header_1">
+            <img src="../images/book.png" class="logo-img" width="35px" height="35px">&nbsp;
+            <a href="../index.html" class="logo"> BookStore </a>
+    
+        </div>
+    
+        <div class="header_2">
+    
+            <nav class="navbar">
+        
+                     <a href="../index.html">Home</a>
+                     <a href="../Webpages/product.html">Product</a>
+                     <a href="../Webpages/blog.html">Blog</a>
+                     <a href="../Webpages/Research.html">Research</a></li>
+                     <a class="active" href="../Webpages/ContactUs.html">Contact Us</a>
+            
+            </nav>
+    
+        </div>
+    
+    </header>
+
+    <div class="contact-box">
+
+        <div class="contact">
+            <p style="font-size: 40px;font-family: poppins; margin: 30px; color: #04aa6d; ">Send a Message</p>
+            <form class="formbox" name="contact_form" onsubmit="return validateform()">
+                
+                    <div class="row5">
+                        <div class="inputbox">
+                            <label>First Name</label>
+                            <input type="text" name="fname" id="fname" placeholder="eg:- Ram">
+                            <span class="formerror" id="error_fname"></span>
+                        </div>
+
+                        <div class="inputbox">
+                            <label>Last Name</label>
+                            <input type="text" name="lname" id="lname" placeholder="eg:- Adhikari">
+                            <span class="formerror" id="error_lname" ></span>
+                        </div>
+                    </div>  
+
+                    <div class="row5">
+                        <div class="inputbox">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="eg:- ram112@gmail.com">
+                            <span class="formerror" id="error_email" ></span>
+                        </div>
+
+                        <div class="inputbox">
+                            <label>Mobile No</label>
+                            <input type="text" name="phone" placeholder="eg:- 9824349883">
+                            <span class="formerror" id="error_mobnum"></span>
+                        </div>
+                    </div>
+
+                    <div class="row10">
+                        <div class="inputbox">
+                            <label>Message</label>
+                            <textarea name="message"  placeholder="Write your message here...."></textarea>
+                            <span class="formerror" id="error_message"></span>
+                        </div>
+
+                        <div class="inputbox">
+                            <input type="submit" id="send-btn" value="Send">
+                        </div>
+                    </div>
+                
+            </form>
+        </div>
+
+        <div class="contact-img">
+            <p>Contact Us</p>
+        </div>
+
+        
+
+    </div>
+    
+
+    <footer class="footer">
+
+		<div class="footer_1">
+            <img src="../images/book.png" class="logo-img" width="35px" height="35px">
+			<p>BookStore</p>
+			<p>Supporting Local BookStore</p>
+		</div>
+	
+		<div class="footer_2">
+			<p>&copy;2022 BookStore All Rights Reserved</p>
+		</div>
+	
+	</footer>
+</body>
+</html>
